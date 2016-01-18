@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="FLWebServicesC.Dashboard" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <%-- <link rel="stylesheet" type="text/css" href="http://dev.goemerge.com/wp-content/themes/EmergeManagedServices/clientPortal.css">
+    <link rel="shortcut icon" type="image/x-icon" href="http://inspire.goemerge.com/wp-content/uploads/2014/12/favicon.png" />
+   
+     <link rel="stylesheet" href="http://dev.goemerge.com/wp-content/themes/EmergeManagedServices/helvetica_font.css" type="text/css">--%> 
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="parent">
+  <div  class="left">
+  
+               <div class="FousOnPanleOnly"  style="height:55px" >
+      <table class="nav-justified" dir="rtl">
+          <tr>
+             
+              <td style="width:85px; text-align:left;padding-top:13px">
+                  <asp:Label ID="Label1" runat="server"  CssClass="ArabicFont" ForeColor="Black"   Text="<%$ Resources:Resource1,select %>" ></asp:Label> 
+               
+              </td>
+              <td style="width:150px; padding-left:10px;padding-top:13px"  >
+      
+                  <asp:DropDownList ID="DDLTutorialID" AutoPostBack="true"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" runat="server"  CssClass="ArabicFont"   Width="150px" DataSourceID="SqlDataSource1" DataTextField="TutorialName" DataValueField="TutorialID" OnDataBound="DDLTutorialID_DataBound" OnSelectedIndexChanged="DDLTutorialID_SelectedIndexChanged"></asp:DropDownList>
+                  
+                       </td>
+            
+                  
+                    <td><asp:DataList ID="DataList1" runat="server"     RepeatDirection="Horizontal" RepeatColumns="15"  Width="100%" >
+                       <ItemTemplate>
+                           <div class="FousOnPanle"  style="height:55px" >
+                               <asp:HyperLink ID="HyperLink12"  runat="server"  NavigateUrl='<%# Eval("LinkPageView") %>' >
+                           
+                            <table     dir="rtl">
+                              
+                             <tr>
+                                  
+                                 <td style="width:30px; height:40px " >
+                                     &nbsp;
+                                    <asp:HyperLink ID="HyperLink1" CssClass="HyperlinkCssClassSmall"   runat="server" Text='<%# Eval("NameView") %>' 
+                                           ImageUrl='<%# Eval("ImageView") %>' 
+                                         NavigateUrl='<%# Eval("LinkPageView") %>'  ></asp:HyperLink>
+                             
+                             
+                          
+                                 </td>
+                                 <td  style="width:160px; height:40px;padding-top:20px;padding-left:6px; "  >
+                                     <asp:Label ID="Label1" runat="server" ForeColor="Black"  CssClass="ArabicFont" Text='<%# Eval("NameView") %>'></asp:Label>
+                                 </td>
+                             </tr>
+                              
+                         </table>
+                           </asp:HyperLink>
+                           </div>
+                              
+                        </ItemTemplate>
+</asp:DataList>
+   
+</td>
+          </tr>
+      </table>
+  
+         </div>
+   </div>
+  
+     <div class="right" dir="rtl">  
+
+          <asp:ContentPlaceHolder ID="ClientsMainContent" runat="server">
+
+        </asp:ContentPlaceHolder></div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FLCS %>" SelectCommand="SELECT TutorialID, TutorialName, StudentID FROM StudentTutorialView WHERE (StudentID = @StudentID) ORDER BY DateIn DESC">
+            <SelectParameters>
+                <asp:SessionParameter Name="StudentID" SessionField="adminID" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+</div>
+ 
+ 
+
+       
+        
+</asp:Content>

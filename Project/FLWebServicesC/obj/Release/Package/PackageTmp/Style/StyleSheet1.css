@@ -1,0 +1,106 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+body{
+     font-family: "Times New Roman", Times, Sans-serif;
+}
+
+.ArabicFont {
+    
+  font-family: "Droid Arabic Kufi" , serif;
+    font-size:14pt;
+}
+.left{
+    width:100%;
+      
+}
+.right{
+    width:100%;
+    min-height:500px;
+
+}
+.parent{
+
+}
+.Menu{
+     width:100%;
+    height:52px;
+}
+.FousOnPanle{
+    background:#6D295A;
+     
+}
+.FousOnPanle:hover{
+    background:#00BFD5;
+   
+}
+.container{
+     width:100%;
+}
+.pageBoday{
+  width:100%;
+  max-width:2450px;
+}
+
+.HyperlinkCssClassSmall img{
+    width:30px;
+    height:30px;
+   
+}
+.FousOnPanleOnly{
+background:#6D295A;
+}
+
+ .FousOnPanleOnlYFouc:hover{
+       background:#00BFD5;
+ }
+
+ .speech
+{
+	position: relative;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	background-color: #fff;
+	border: 8px solid #666;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	box-shadow: 2px 2px 4px #888;
+}
+       .pnl2 {  
+        font-weight: bold;  
+        background-color: #fff;  
+        padding: 5px;  
+        cursor: pointer;  
+        border: solid 1px #c0c0c0;  
+    }  
+
+       tr{
+           margin-bottom:30px;
+       }
+
+.RowWidth {
+    float:left;
+}
+      
+.ItemNews{
+   width:100%;
+    margin-bottom:15px;
+  border: 1px solid #d3d3d3;
+    background:#fff
+
+}
+.ItemNewsBackgruound {
+    background: #d4d3d3;
+    width:100%;
+    padding-right:1%;
+     padding-left:1%;
+   
+}
+.ItemNewsConatin {
+    padding-top:5px;
+    padding-left:20px;
+     padding-right:20px;
+}

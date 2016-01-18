@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="FLWebServicesC.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  
+
+    
+  <title>Hussein WebSite</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="Style/StyleSheet1.css" rel="stylesheet" />
+     
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.aspx">Alrubaye Profile</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Channel
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="YouTubeChannel.aspx">YouTube</a></li>
+            <li><a href="BlogSpot.aspx">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="AppStore.aspx">My App in Store</a></li>
+        <li><a href="WhatIdid.aspx">What I did</a></li>
+          <li><a href="ContactME.aspx">Contact Me</a></li>
+          <li><a href="Education.aspx">Learning</a></li>
+           <li class="active"><a href="AdminLogin.aspx"><strong >My courses </strong></a></li>
+
+          </ul>
+         <ul class="nav navbar-nav navbar-right">
+        <li><a href="Education.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="AdminLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+     <div class="alert alert-info" style="text-align:center ">
+     copyright © 2015 Hussein Al-Rubaye. all rights reserved.
+</div>
+</div>
+   
+       
+       
+    </form>
+</body>
+</html>
